@@ -16,19 +16,10 @@ import lombok.extern.slf4j.Slf4j;
 @NoArgsConstructor
 public class Team {
   @Id
-  @GeneratedValue
-  private String teamId;
-
+  private Long teamId;
   private String teamName;
   private String coach;
   private String stadium;
   private String foundedYear;
-  private String points;
-  private String goalsFor;
-  private String goalsAgainst;
-  private String wins;
-  private String losses;
-  private String draws;
-
-  }
+}
 
