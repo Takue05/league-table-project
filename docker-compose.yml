@@ -1,7 +1,26 @@
 version: '3.8'
 
 services:
-  postgres:
+#  app:
+#    image: football-league-manager:latest
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      SPRING_DATASOURCE_URL: ${DATABASE_URL}
+#      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+#      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+#    depends_on:
+#      postgres-db:
+#        condition: service_healthy
+#    networks:
+#      - app-network
+
+
+
+  postgres-db:
     image: postgres:13
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
@@ -11,6 +30,17 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+#    healthcheck:
+#      test: [ "CMD", "pg_isready -U ${POSTGRES_USER}" ]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5
+#    networks:
+#      - app-network
 
 volumes:
   postgres_data:
+
+#networks:
+#  app-network:
+#    driver: bridge

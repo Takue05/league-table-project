@@ -54,6 +54,10 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-logging</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
@@ -68,6 +72,7 @@
               <artifactId>lombok</artifactId>
             </exclude>
           </excludes>
+<!--          <finalName>football-league-manager</finalName>-->
         </configuration>
       </plugin>
     </plugins>

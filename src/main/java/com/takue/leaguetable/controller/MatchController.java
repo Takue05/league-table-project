@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/matches")
+@RequestMapping("/matches")
 public class MatchController {
 
   private final MatchService matchService;
@@ -21,7 +21,7 @@ public class MatchController {
     this.matchService = matchService;
   }
 
-    @PostMapping("/record-match")
+    @PostMapping("/record")
       public ResponseEntity<String> recordMarch(@RequestBody Match match){
 
       try {

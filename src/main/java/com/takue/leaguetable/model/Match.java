@@ -30,6 +30,7 @@ public class Match{
   private String referee ;
   private String  leagueCup;
   private String season;
+  private String leagueDivision;
 
 
 
